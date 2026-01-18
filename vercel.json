@@ -5,5 +5,10 @@
       "source": "/api/(.*)",
       "destination": "/server/index.js"
     }
-  ]
+  ],
+  "functions": {
+    "server/index.js": {
+      "includeFiles": "server/data/**"
+    }
+  }
 }
