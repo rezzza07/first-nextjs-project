@@ -17,12 +17,17 @@ export default function AddItem() {
       price: formData.get("price"),
       image: formData.get("image"),
       description: formData.get("description"),
-      category: formData.get("category"), 
+      category: formData.get("category"),
       stock: formData.get("stock") || "In Stock",
     };
 
     try {
-      const res = await fetch("/api/items", {
+      // Determine if we are on Vercel or Localhost
+      const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+        ? `https://fresh-mart-rezzza07.vercel.app`
+        : "http://localhost:5000";
+
+      const res = await fetch(`${baseUrl}/api/items`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(itemData),
@@ -34,17 +39,18 @@ export default function AddItem() {
           style: { borderRadius: '15px', background: '#333', color: '#fff' }
         });
         e.target.reset();
-        router.push("/items"); 
+        router.push("/items");
         router.refresh();
       } else {
         throw new Error("Failed to add");
       }
     } catch (err) {
       toast.error("Could not reach the server.");
+      console.error("Submit Error:", err);
     } finally {
       setLoading(false);
     }
-  }
+  } // <--- The missing brace is now here!
 
   return (
     <section className="min-h-screen bg-slate-50 py-20 px-6">

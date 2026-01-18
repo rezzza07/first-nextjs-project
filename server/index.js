@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const DATA_PATH = path.join(process.cwd(), "server", "data", "items.json");
+const DATA_PATH = path.join(__dirname, "data", "items.json");
 
 
 const getFreshItems = () => {

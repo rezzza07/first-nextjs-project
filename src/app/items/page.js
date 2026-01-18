@@ -1,9 +1,26 @@
 import ItemCard from "../../components/ItemCard";
 
 async function getItems() {
-  const res = await fetch("/api/items", { cache: "no-store" });
-  if (!res.ok) return [];
-  return res.json();
+  
+  const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL 
+  ? `https://fresh-mart-rezzza07.vercel.app` 
+  : "http://127.0.0.1:5000";
+
+  try {
+    const res = await fetch(`${baseUrl}/api/items`, { 
+      cache: "no-store" 
+    });
+
+    if (!res.ok) {
+      console.error("Fetch failed:", res.status);
+      return [];
+    }
+    
+    return await res.json();
+  } catch (error) {
+    console.error("Connection Error:", error);
+    return [];
+  }
 }
 
 export default async function ItemsPage() {

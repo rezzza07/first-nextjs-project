@@ -12,15 +12,23 @@ import {
 
 async function getItem(id) {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:5000";
-    const res = await fetch(`${baseUrl}/items/${id}`, {
+
+    const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL 
+      ? `https://fresh-mart-rezzza07.vercel.app` 
+      : "http://127.0.0.1:5000";
+
+    const res = await fetch(`${baseUrl}/api/items/${id}`, {
       cache: "no-store",
     });
 
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.error(`Error ${res.status}: Failed to fetch item ${id}`);
+      return null;
+    }
+    
     return await res.json();
   } catch (error) {
-    console.error("Fetch error:", error);
+    console.error("Deployment Fetch error:", error);
     return null;
   }
 }
