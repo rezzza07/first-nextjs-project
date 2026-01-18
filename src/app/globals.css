@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* In Tailwind v4, we use @theme to define variables */
+@theme {
+  --color-brand-emerald: #059669;
+  --color-slate-surface: #f8fafc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles */
+@layer base {
+  body {
+    margin: 0;
+    color: #0f172a; /* Slate 900 */
+    background: #f8fafc; /* Slate 50 */
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Components using @apply */
+@layer components {
+  /* This is where your previous error was. 
+     You must use @apply to use Tailwind utilities inside a CSS class */
+  .glass-nav {
+    @apply sticky top-0 z-50 bg-white/70 backdrop-blur-lg border-b border-slate-100 shadow-sm;
+  }
+
+  .grocery-card {
+    @apply bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-white 
+           transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold 
+           hover:bg-emerald-700 transition-all active:scale-95 shadow-lg shadow-emerald-100;
+  }
+}
+
+/* Professional Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
 }

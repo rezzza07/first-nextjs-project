@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "name": "Premium Miniket Rice",
+    "category": "Grains",
+    "description": "Extra-long grain and double-polished to ensure a silk-like texture. Sourced from the fertile lands of Dinajpur, it is aged for at least 12 months for perfect non-sticky consistency. Ideal for daily meals.",
+    "price": 75,
+    "stock": "250kg",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=600"
+  },
+  {
+    "id": "2",
+    "name": "Local Diamond Potato",
+    "category": "Vegetables",
+    "description": "Freshly harvested from the Munshiganj region. Known for thin skin and creamy interior, perfect for crispy fries or traditional curries. Hand-sorted to ensure zero blemishes.",
+    "price": 45,
+    "stock": "500kg",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f02ac6d31?q=80&w=600"
+  },
+  {
+    "id": "3",
+    "name": "Pure Refined Soybean Oil",
+    "category": "Oil",
+    "description": "Fortified with Vitamin A and D, undergoing a 5-step filtration process. High smoke point makes it the healthiest choice for deep frying and everyday sautéing.",
+    "price": 185,
+    "stock": "120L",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacabc8805?q=80&w=600"
+  },
+  {
+    "id": "4",
+    "name": "Organic Red Lentils",
+    "category": "Pulses",
+    "description": "High-protein, unpolished red lentils sourced from organic farms. Easy to cook and provides an excellent source of fiber and iron. Thickens naturally into a rich, savory stew.",
+    "price": 130,
+    "stock": "100kg",
+    "image": "https://images.unsplash.com/photo-1585994116122-37887556770d?q=80&w=600"
+  },
+  {
+    "id": "5",
+    "name": "Nazirshail Rice",
+    "category": "Grains",
+    "description": "A traditional favorite, this slender grain rice is known for its distinct aroma and high nutritional value. Perfect for making traditional Bengali dishes or steamed rice.",
+    "price": 82,
+    "stock": "180kg",
+    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?q=80&w=600"
+  },
+  {
+    "id": "6",
+    "name": "Cold-Pressed Mustard Oil",
+    "category": "Oil",
+    "description": "Extracted using traditional wooden Ghani methods to preserve natural pungency and antioxidants. Perfect for pickles, bhartas, and authentic regional cooking.",
+    "price": 210,
+    "stock": "80L",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacabc8805?q=80&w=601"
+  },
+  {
+    "id": "7",
+    "name": "Premium Chickpeas (Chola)",
+    "category": "Pulses",
+    "description": "Large-sized, high-grade chickpeas. These are sorted for uniformity in size to ensure even cooking. Rich in protein and ideal for salads or spiced snacks.",
+    "price": 95,
+    "stock": "150kg",
+    "image": "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?q=80&w=600"
+  },
+  {
+    "id": "8",
+    "name": "Organic Turmeric Powder",
+    "category": "Spices",
+    "description": "Grown without synthetic pesticides. Our turmeric powder contains high curcumin levels, providing deep color and powerful medicinal benefits to every dish.",
+    "price": 110,
+    "stock": "50kg",
+    "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=600"
+  },
+  {
+    "id": "9",
+    "name": "Fresh Red Onions",
+    "category": "Vegetables",
+    "description": "Pungent and crispy local red onions. Perfect as a base for curries or served raw in salads. We source only the firmest bulbs for maximum shelf life.",
+    "price": 65,
+    "stock": "400kg",
+    "image": "https://images.unsplash.com/photo-1508747703725-719777637510?q=80&w=600"
+  },
+  {
+    "id": "10",
+    "name": "Iodized Salt",
+    "category": "Essentials",
+    "description": "Triple-refined, vacuum-evaporated salt with the perfect amount of iodine. Pure white crystals that dissolve quickly and enhance every flavor profile.",
+    "price": 38,
+    "stock": "300kg",
+    "image": "https://images.unsplash.com/photo-1626197031507-c17099753214?q=80&w=600"
+  },
+  {
+    "id": "11",
+    "name": "Chinigura Fragrant Rice",
+    "category": "Grains",
+    "description": "Tiny, pearl-like grains with an intoxicating aroma. This is the ultimate choice for Polau, Biryani, and Zarda. Highly aromatic and non-sticky.",
+    "price": 145,
+    "stock": "90kg",
+    "image": "https://images.unsplash.com/photo-1591814448473-7027669a9fbd?q=80&w=600"
+  },
+  {
+    "id": "12",
+    "name": "Premium Garlic",
+    "category": "Vegetables",
+    "description": "Large, easy-to-peel cloves with intense flavor. Essential for building the aromatic base of almost any savory dish. Locally sourced and dried properly.",
+    "price": 160,
+    "stock": "100kg",
+    "image": "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?q=80&w=600"
+  },
+  {
+    "id": "13",
+    "name": "Mung Dal (Yellow)",
+    "category": "Pulses",
+    "description": "Premium yellow mung lentils, lightly roasted for a nutty aroma. Easy to digest and packed with nutrients. A comforting choice for daily meals.",
+    "price": 140,
+    "stock": "110kg",
+    "image": "https://images.unsplash.com/photo-1547050605-2f223896e386?q=80&w=600"
+  },
+  {
+    "id": "14",
+    "name": "Sugar (Refined)",
+    "category": "Essentials",
+    "description": "Pure white refined sugar made from sugarcane. Crystal clear and highly soluble, perfect for tea, coffee, and home-baked desserts.",
+    "price": 135,
+    "stock": "200kg",
+    "image": "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?q=80&w=600"
+  },
+  {
+    "id": "15",
+    "name": "Ginger (Fresh)",
+    "category": "Vegetables",
+    "description": "Zesty and spicy fresh ginger roots. Excellent for flavoring teas or adding a sharp kick to meat and vegetable preparations.",
+    "price": 190,
+    "stock": "60kg",
+    "image": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=600"
+  },
+  {
+    "id": "16",
+    "name": "Whole Black Pepper",
+    "category": "Spices",
+    "description": "Bold and spicy whole peppercorns. Grind them fresh to release the full heat and aroma. Sourced from the best estates for maximum essential oils.",
+    "price": 850,
+    "stock": "25kg",
+    "image": "https://images.unsplash.com/photo-1509358740172-f77c168f6312?q=80&w=600"
+  },
+  {
+    "id": "17",
+    "name": "Brown Atta (Whole Wheat)",
+    "category": "Grains",
+    "description": "Stone-ground whole wheat flour. Retains the bran and germ, providing more fiber and nutrients than white flour. Ideal for healthy rotis.",
+    "price": 55,
+    "stock": "220kg",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600"
+  },
+  {
+    "id": "18",
+    "name": "Green Chili",
+    "category": "Vegetables",
+    "description": "Fresh, spicy, and vibrant green chilies. Picked daily to ensure crunch and heat. An essential heat source for South Asian cuisine.",
+    "price": 120,
+    "stock": "40kg",
+    "image": "https://images.unsplash.com/photo-1588165171080-c89acfa5ee83?q=80&w=600"
+  },
+  {
+    "id": "19",
+    "name": "Cumin Seeds",
+    "category": "Spices",
+    "description": "Highly aromatic whole cumin seeds. Perfect for tempering or grinding into fresh powder. Known for its digestive properties and distinct flavor.",
+    "price": 600,
+    "stock": "35kg",
+    "image": "https://images.unsplash.com/photo-1599347520029-92f7034c5643?q=80&w=600"
+  },
+  {
+    "id": "20",
+    "name": "Sunflower Oil",
+    "category": "Oil",
+    "description": "Light and heart-healthy sunflower oil. Low in saturated fats and rich in Vitamin E. Perfect for light frying and baking.",
+    "price": 175,
+    "stock": "100L",
+    "image": "https://images.unsplash.com/photo-1523362140064-0775a2f5f134?q=80&w=600"
+  }
+]
