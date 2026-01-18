@@ -1,8 +1,7 @@
 import ItemCard from "../../components/ItemCard";
 
 async function getItems() {
-  // We use cache: "no-store" to ensure we see new items immediately after adding them
-  const res = await fetch("http://localhost:5000/items", { cache: "no-store" });
+  const res = await fetch("/api/items", { cache: "no-store" });
   if (!res.ok) return [];
   return res.json();
 }
@@ -14,7 +13,6 @@ export default async function ItemsPage() {
     <div className="min-h-screen bg-slate-50/50 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         
-        {/* Page Header */}
         <header className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-2">
             
@@ -34,7 +32,7 @@ export default async function ItemsPage() {
           </div>
         </header>
 
-        {/* Responsive Gorgeous Grid */}
+      
         {items.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
             {items.map((item) => (

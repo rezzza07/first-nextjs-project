@@ -7,29 +7,31 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// This tells you exactly where the server is looking for the file
-const DATA_PATH = path.join(__dirname, "data", "items.json");
-console.log("SERVER IS READING FROM:", DATA_PATH);
 
-// Helper function to get fresh data from the file
+const DATA_PATH = path.join(process.cwd(), "server", "data", "items.json");
+
+
 const getFreshItems = () => {
-  const rawData = fs.readFileSync(DATA_PATH, "utf8");
-  return JSON.parse(rawData);
+  try {
+    const rawData = fs.readFileSync(DATA_PATH, "utf8");
+    return JSON.parse(rawData);
+  } catch (error) {
+    console.error("Error reading JSON file:", error);
+    return []; 
+  }
 };
 
-// --- ROUTES ---
 
-app.get("/items", (req, res) => {
+app.get("/api/items", (req, res) => {
   try {
-    const items = getFreshItems(); // Read fresh from disk
-    console.log(`Successfully sent ${items.length} items to frontend`);
+    const items = getFreshItems();
     res.json(items);
   } catch (error) {
     res.status(500).json({ error: "Could not read data file" });
   }
 });
 
-app.get("/items/:id", (req, res) => {
+app.get("/api/items/:id", (req, res) => {
   try {
     const items = getFreshItems();
     const item = items.find(i => i.id.toString() === req.params.id.toString());
@@ -44,7 +46,7 @@ app.get("/items/:id", (req, res) => {
   }
 });
 
-app.post("/items", (req, res) => {
+app.post("/api/items", (req, res) => {
   try {
     const items = getFreshItems();
     const { name, price, description, category, image, stock } = req.body;
@@ -61,14 +63,20 @@ app.post("/items", (req, res) => {
 
     items.push(newItem);
 
-    // Save the new array back to the JSON file so it persists!
+    
     fs.writeFileSync(DATA_PATH, JSON.stringify(items, null, 2));
 
-    console.log(`✅ Added & Saved to Disk: ${newItem.name}`);
     res.status(201).json(newItem);
   } catch (error) {
     res.status(500).json({ error: "Could not save item" });
   }
 });
 
-app.listen(5000, () => console.log("🚀 Server running on http://localhost:5000"));
+
+module.exports = app;
+
+
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = 5000;
+  app.listen(PORT, () => console.log(`🚀 Local Server: http://localhost:${PORT}`));
+}

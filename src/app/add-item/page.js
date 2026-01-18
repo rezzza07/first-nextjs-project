@@ -17,12 +17,12 @@ export default function AddItem() {
       price: formData.get("price"),
       image: formData.get("image"),
       description: formData.get("description"),
-      category: formData.get("category"), // Added category to match our gorgeous data
+      category: formData.get("category"), 
       stock: formData.get("stock") || "In Stock",
     };
 
     try {
-      const res = await fetch("http://localhost:5000/items", {
+      const res = await fetch("/api/items", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(itemData),
@@ -34,7 +34,7 @@ export default function AddItem() {
           style: { borderRadius: '15px', background: '#333', color: '#fff' }
         });
         e.target.reset();
-        router.push("/items"); // Redirect to shop to see the new item
+        router.push("/items"); 
         router.refresh();
       } else {
         throw new Error("Failed to add");
